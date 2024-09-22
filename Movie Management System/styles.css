@@ -1,0 +1,246 @@
+
+body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and navigation styling */
+header {
+    background: rgb(2,0,36);
+    background: linear-gradient(145deg, rgba(2,0,36,1) 0%, rgba(9,92,121,1) 15%, rgba(0,212,255,1) 85%, rgba(2,0,36,1) 100%);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    width: 100%; /* Ensure the nav element spans the entire width of its parent */
+    display: flex; /* Using flexbox */
+    justify-content: center; /* Center navigation items horizontally */
+    align-items: center; /* Align items in the middle vertically */
+}
+
+nav ul {
+    display: flex; /* Apply flexbox to the list */
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove bullet points */
+    width: 100%; /* Full width to allow spacing to take effect */
+    justify-content: space-around; /* Even spacing around each link */
+}
+
+nav ul li {
+    padding: 10px 20px; /* Padding around each link for better clickability */
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+nav ul li a:hover {
+    color: #4A90E2; /* Light blue color on hover */
+    background-color: #333; /* Dark background on hover */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+}
+
+
+
+/* Main content area */
+main {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Feature container for grid display */
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.feature-container article {
+    background: #e7e7e7;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Form styling */
+form {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+input, textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 movies per row */
+    gap: 20px; /* Spacing between boxes */
+    padding: 20px;
+}
+
+.movie {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image doesn't break the border-radius */
+    text-align: center; /* Center-align the text */
+}
+.recommendations-intro {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background to distinguish the section */
+    border-left: 5px solid #4A90E2; /* A blue accent bar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    text-align: center; /* Centered text */
+}
+
+.listing-intro {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background to distinguish the section */
+    border-left: 5px solid #4A90E2; /* A blue accent bar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    text-align: center; /* Centered text */
+}
+.movie img {
+    width: 100%; /* Ensures the image covers the box */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any space below the image */
+}
+
+.movie p {
+    padding: 10px; /* Padding around text for better readability */
+    font-size: 16px; /* Sizing the font */
+    color: #333; /* Text color */
+}
+
+
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background: rgb(2,0,36);
+background: linear-gradient(145deg, rgba(2,0,36,1) 0%, rgba(9,92,121,1) 25%, rgba(0,212,255,1) 75%, rgba(2,0,36,1) 100%);
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 movies per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: 1fr; /* 1 movie per row on mobile phones */
+    }
+}
