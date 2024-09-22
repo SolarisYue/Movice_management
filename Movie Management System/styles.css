@@ -1,4 +1,4 @@
-
+/* Reset some default styles */
 body, h1, h2, h3, p, ul, li, form, input, textarea, button {
     margin: 0;
     padding: 0;
@@ -19,45 +19,53 @@ body {
 
 /* Header and navigation styling */
 header {
-    background: rgb(2,0,36);
-    background: linear-gradient(145deg, rgba(2,0,36,1) 0%, rgba(9,92,121,1) 15%, rgba(0,212,255,1) 85%, rgba(2,0,36,1) 100%);
+    background: rgb(199,195,255);
+    background: linear-gradient(145deg, rgba(199,195,255,1) 0%, rgba(155,231,255,1) 15%, rgba(255,216,89,1) 75%, rgba(123,140,255,1) 100%);
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 nav {
-    width: 100%; /* Ensure the nav element spans the entire width of its parent */
-    display: flex; /* Using flexbox */
-    justify-content: center; /* Center navigation items horizontally */
-    align-items: center; /* Align items in the middle vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    /* Transparent background with blur effect */
+    background: rgba(0, 0, 0, 0.250); /* Semi-transparent background */
+    backdrop-filter: blur(15px); /* Blur the background behind the nav */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.375); /* Subtle shadow for depth */
 }
 
 nav ul {
-    display: flex; /* Apply flexbox to the list */
+    display: flex;
+    list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
-    list-style-type: none; /* Remove bullet points */
-    width: 100%; /* Full width to allow spacing to take effect */
-    justify-content: space-around; /* Even spacing around each link */
+    margin: 0;
+    width: 100%;
+    color: black;
+    justify-content: space-around;
 }
 
 nav ul li {
-    padding: 10px 20px; /* Padding around each link for better clickability */
+    padding: 10px 20px;
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: #000000;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease; /* Smooth transition for color changes */
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #4A90E2; /* Light blue color on hover */
-    background-color: #333; /* Dark background on hover */
+    color: #ffffff; /* White text on hover for better contrast */
+    background-color: #4A90E2; /* Light blue background on hover */
     border-radius: 5px; /* Rounded corners for aesthetic */
 }
+
 
 
 
@@ -186,9 +194,9 @@ button:hover {
 /* Footer styles */
 footer {
     text-align: center;
-    background: rgb(2,0,36);
-background: linear-gradient(145deg, rgba(2,0,36,1) 0%, rgba(9,92,121,1) 25%, rgba(0,212,255,1) 75%, rgba(2,0,36,1) 100%);
-    color: white;
+    background: rgb(199,195,255);
+    background: linear-gradient(145deg, rgba(199,195,255,1) 0%, rgba(155,231,255,1) 15%, rgba(255,216,89,1) 75%, rgba(123,140,255,1) 100%);
+    color: black;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
